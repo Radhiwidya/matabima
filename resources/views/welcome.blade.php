@@ -8,10 +8,6 @@
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
-    <h2 class="text-2xl text-blue-700 font-bold italic">Hello world</h2>
 </body>
 
 </html>
