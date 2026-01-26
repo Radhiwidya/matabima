@@ -12,5 +12,4 @@
     @vite('resources/css/app.css')
 </head>
 @yield('content')
-
 </html>
