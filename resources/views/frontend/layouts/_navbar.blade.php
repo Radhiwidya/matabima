@@ -1,4 +1,4 @@
-<nav class="fixed inline-flex w-full bg-black/50 backdrop-blur-3xl py-2">
+<nav class="fixed z-50 inline-flex w-full bg-black/30 backdrop-blur-3xl py-2">
     <div class="px-15 w-full flex justify-between items-center">
         <div class=" w-1/6">
             <img src="{{ asset("images/logo.png")}}" alt="">
