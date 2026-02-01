@@ -25,6 +25,7 @@
 <body>
     @include('frontend.layouts._navbar')
     @yield('content')
+    @include('frontend.layouts._footer')
 </body>
 
 </html>
