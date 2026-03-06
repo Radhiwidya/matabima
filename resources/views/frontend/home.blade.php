@@ -43,16 +43,20 @@
                 <h2 class="text-2xl font-bold mb-2">ECOTICA Business Culture</h2>
                 <div class=" inline-flex w-full min-h-3">
                     <div class=" bg-[#0E4F58] text-white text-xl mr-6 rounded-full px-8 py-2 font-bold">ECOLOGY</div>
-                    <div class=" text-[#0E4F58] text-base text-justify w-full mr-8 border-b-2 border-[#76BDD6]">Conservation of natural resources
+                    <div class=" text-[#0E4F58] text-base text-justify w-full mr-8 border-b-2 border-[#76BDD6]">Conservation
+                        of natural resources
                         and their sustainable, responsible utilization.</div>
                 </div>
                 <div class=" inline-flex mt-4 w-full min-h-3">
                     <div class=" bg-[#0E4F58] text-white text-xl mr-6 rounded-full px-8 py-2 font-bold">SCIENTIFIC</div>
-                    <div class=" text-[#0E4F58] text-base text-justify w-full mr-8 border-b-2 border-[#76BDD6]">Ideas, planning, and implementation grounded in scientific principles and integrity.</div>
+                    <div class=" text-[#0E4F58] text-base text-justify w-full mr-8 border-b-2 border-[#76BDD6]">Ideas,
+                        planning, and implementation grounded in scientific principles and integrity.</div>
                 </div>
                 <div class=" inline-flex mt-4 w-full min-h-3">
                     <div class=" bg-[#0E4F58] text-white text-xl mr-6 rounded-full px-8 py-2 font-bold">ETHICS</div>
-                    <div class=" text-[#0E4F58] text-base text-justify w-full mr-8 border-b-2 border-[#76BDD6]">Rooted in faith, justice, equality, mutual respect, solidarity, and perseverance to achieve shared goals.</div>
+                    <div class=" text-[#0E4F58] text-base text-justify w-full mr-8 border-b-2 border-[#76BDD6]">Rooted in
+                        faith, justice, equality, mutual respect, solidarity, and perseverance to achieve shared goals.
+                    </div>
                 </div>
             </div>
             <!-- GAMBAR -->
@@ -94,31 +98,121 @@
                 </div>
             </div>
         </div>
-        <div class="relative w-full bg-[#E5E5E5] min-h-[520px] z-10">
-            <div class="flex justify-center text-6xl font-bold pt-8 text-[#0E4F58]">
+        <div class="relative w-full bg-[#E5E5E5] min-h-[520px] text-[#0E4F58] z-10">
+            <div class="flex justify-center text-6xl font-bold pt-8">
                 <h2>Why Choose Us</h2>
             </div>
-        
+
             <div class="flex justify-center text-2xl font-bold pt-1 text-[#4A4A4A]">
                 <h2>Trusted Partner in coastal and environmental management</h2>
             </div>
-        
-            <div class="relative flex justify-center w-full px-56 pt-10">
-                <div class="flex justify-between gap-60">
-                    <div class="bg-white/70 mb-28 z-10 shadow-[0_0_50px_0_#2EA7E060] w-full rounded-2xl items-center pl-12 space-x-5 min-w-48 min-h-48"></div>
-        
-                    <div class="bg-white/70 mb-28 z-10 shadow-[0_0_50px_0_#2EA7E060] w-full rounded-2xl items-center pl-12 space-x-5 min-w-48 min-h-48"></div>
-        
-                    <div class="bg-white/70 mb-28 z-10 shadow-[0_0_50px_0_#2EA7E060] w-full rounded-2xl items-center pl-12 space-x-5 min-w-48 min-h-48"></div>
+
+            <div class="relative flex justify-center w-full px-28 pt-10">
+                <div class="flex justify-between gap-48">
+                    <div
+                        class="flex flex-col bg-white/90 mb-28 z-10 shadow-[0_0_50px_0_#2EA7E060] w-full rounded-2xl justify-center items-center text-center px-6 py-10 min-w-48 min-h-48">
+                        <div class="flex w-full justify-center mb-4">
+                            <img src="{{ asset('images/earth.svg') }}" class="w-1/3" alt="">
+                        </div>
+                        <div class="text-xl font-bold mb-2">
+                            Expertise
+                        </div>
+                        <p class="text-base">
+                            Science-based solutions built on rigorous research and proven methodologies
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col bg-white/90 mb-28 z-10 shadow-[0_0_50px_0_#2EA7E060] w-full rounded-2xl justify-center items-center text-center px-6 py-10 min-w-48 min-h-48">
+                        <div class="flex w-full justify-center mb-4">
+                            <img src="{{ asset('images/earth.svg') }}" class="w-1/3" alt="">
+                        </div>
+                        <div class="text-xl font-bold mb-2">
+                            Experience
+                        </div>
+                        <p class="text-base">
+                            Years of hands-on experience delivering complex environmental and marine project.
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col bg-white/90 mb-28 z-10 shadow-[0_0_50px_0_#2EA7E060] w-full rounded-2xl justify-center items-center text-center px-6 py-10 min-w-48 min-h-48">
+                        <div class="flex w-full justify-center mb-4">
+                            <img src="{{ asset('images/earth.svg') }}" class="w-1/3" alt="">
+                        </div>
+                        <div class="text-xl font-bold mb-2">
+                            Sustainable
+                        </div>
+                        <p class="text-base">
+                            Commited to sustainablw solutions through environmental responsibility and community engagment.
+                        </p>
+                    </div>
                 </div>
             </div>
-        
+
             <!-- Pattern -->
             <div class="absolute -bottom-16 left-0 w-full z-0 pointer-events-none">
                 <img src="{{ asset('images/pattern3.svg') }}" class="w-full" alt="">
             </div>
         </div>
-        
-        <div class="relative w-full h-96 bg-amber-400 z-50"></div>
+        <div class="relative w-full">
+
+            <img src="{{ asset('images/bg.png') }}" class="w-full h-auto" alt="">
+
+            <div class="absolute inset-0 flex flex-col items-center pt-14">
+
+                <h2 class="bree-serif text-6xl mb-20 text-[#0E4F58] text-center">
+                    Featured Content
+                </h2>
+
+                <div class="flex justify-center gap-16">
+                    <a href="">
+                        <div
+                            class="flex flex-col bg-white/90  rounded-2xl justify-center items-center text-center min-w-48 max-w-sm 
+                            transform transition duration-300 hover:bg-white/70 hover:-translate-y-3 hover:shadow-[0_20px_60px_0_#2EA7E090]">
+
+                            <div class="flex w-full justify-center mb-2">
+                                <img src="{{ asset('images/ourService.png') }}" class="w-full rounded-2xl" alt="">
+                            </div>
+
+                            <div class="text-xl text-[#0E4F58] font-bold mb-4">
+                                Our Service
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="">
+                        <div
+                            class="flex flex-col bg-white/90  rounded-2xl justify-center items-center text-center min-w-48 max-w-sm 
+                            transform transition duration-300 hover:bg-white/70 hover:-translate-y-3 hover:shadow-[0_20px_60px_0_#2EA7E090]">
+
+                            <div class="flex w-full justify-center mb-2">
+                                <img src="{{ asset('images/ourClient.png') }}" class="w-full rounded-2xl" alt="">
+                            </div>
+
+                            <div class="text-xl text-[#0E4F58] font-bold mb-4">
+                                Our Clients
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="">
+                        <div
+                            class="flex flex-col bg-white/90  rounded-2xl justify-center items-center text-center min-w-48 max-w-sm 
+                            transform transition duration-300 hover:bg-white/70 hover:-translate-y-3 hover:shadow-[0_20px_60px_0_#2EA7E090]">
+
+                            <div class="flex w-full justify-center mb-2">
+                                <img src="{{ asset('images/ourProduct.png') }}" class="w-full rounded-2xl"
+                                    alt="">
+                            </div>
+
+                            <div class="text-xl text-[#0E4F58] font-bold mb-4">
+                                Our Product
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        @include('frontend.layouts._footer')
     </div>
 @endsection
