@@ -6,10 +6,10 @@
             Browser kamu tidak mendukung video.
         </video>
         <img src="{{ asset('images/welcome.png') }}" alt="" class=" absolute top-80 w-3/5 left-16">
-        <div class="flex justify-center text-6xl font-normal pt-8 bree-serif text-[#0E4F58]">
+        <div id="WWA" class="flex justify-center text-6xl font-normal pt-8 bree-serif text-[#0E4F58]">
             Who We Are
         </div>
-        <div class="relative flex justify-center w-full px-15 pt-10 overflow-hidden">
+        <div class="relative flex justify-center w-full px-16 pt-10 overflow-hidden">
             <div
                 class="flex justify-between bg-white/70 mb-28 z-10 shadow-[0_0_50px_0_#2EA7E060] w-full rounded-2xl items-center px-12 space-x-5">
                 <img src="{{ asset('images/image1.png') }}" class="w-1/3" alt="">
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class=" relative w-full bg-white">
+        <div id="contact" class=" relative w-full bg-white">
             <div class="flex justify-center text-6xl font-bold pt-8 text-[#0E4F58]">
                 <h2>Contact Us!</h2>
             </div>
@@ -153,66 +153,7 @@
                 <img src="{{ asset('images/pattern3.svg') }}" class="w-full" alt="">
             </div>
         </div>
-        <div class="relative w-full">
-
-            <img src="{{ asset('images/bg.png') }}" class="w-full h-auto" alt="">
-
-            <div class="absolute inset-0 flex flex-col items-center pt-14">
-
-                <h2 class="bree-serif text-6xl mb-20 text-[#0E4F58] text-center">
-                    Featured Content
-                </h2>
-
-                <div class="flex justify-center gap-16">
-                    <a href="">
-                        <div
-                            class="flex flex-col bg-white/90  rounded-2xl justify-center items-center text-center min-w-48 max-w-sm 
-                            transform transition duration-300 hover:bg-white/70 hover:-translate-y-3 hover:shadow-[0_20px_60px_0_#2EA7E090]">
-
-                            <div class="flex w-full justify-center mb-2">
-                                <img src="{{ asset('images/ourService.png') }}" class="w-full rounded-2xl" alt="">
-                            </div>
-
-                            <div class="text-xl text-[#0E4F58] font-bold mb-4">
-                                Our Service
-                            </div>
-
-                        </div>
-                    </a>
-                    <a href="">
-                        <div
-                            class="flex flex-col bg-white/90  rounded-2xl justify-center items-center text-center min-w-48 max-w-sm 
-                            transform transition duration-300 hover:bg-white/70 hover:-translate-y-3 hover:shadow-[0_20px_60px_0_#2EA7E090]">
-
-                            <div class="flex w-full justify-center mb-2">
-                                <img src="{{ asset('images/ourClient.png') }}" class="w-full rounded-2xl" alt="">
-                            </div>
-
-                            <div class="text-xl text-[#0E4F58] font-bold mb-4">
-                                Our Clients
-                            </div>
-
-                        </div>
-                    </a>
-                    <a href="">
-                        <div
-                            class="flex flex-col bg-white/90  rounded-2xl justify-center items-center text-center min-w-48 max-w-sm 
-                            transform transition duration-300 hover:bg-white/70 hover:-translate-y-3 hover:shadow-[0_20px_60px_0_#2EA7E090]">
-
-                            <div class="flex w-full justify-center mb-2">
-                                <img src="{{ asset('images/ourProduct.png') }}" class="w-full rounded-2xl"
-                                    alt="">
-                            </div>
-
-                            <div class="text-xl text-[#0E4F58] font-bold mb-4">
-                                Our Product
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        @include('frontend.layouts._featured')
         @include('frontend.layouts._footer')
     </div>
 @endsection
