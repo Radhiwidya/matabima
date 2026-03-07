@@ -6,9 +6,8 @@
             <img src="{{ asset('images/textProduct.png') }}"
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/5" alt="">
         </div>
-        <div class="relative w-full">
-            <img src="{{ asset('images/bg4.png') }}" class="w-full h-auto" alt="">
-            <div class="absolute inset-0 flex flex-col items-center pt-14  px-16">
+        <div class="relative w-full bg-cover bg-center" style="background-image: url('{{ asset('images/bg4.png') }}');">
+            <div class="flex flex-col items-center pt-14 px-16 pb-20">
                 <h2
                     class="text-5xl text-yellow-500 font-bold text-center bg-black/50 underline pb-4 pt-2 px-10 rounded-2xl">
                     Products

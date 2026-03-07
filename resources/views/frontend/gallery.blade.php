@@ -25,6 +25,7 @@
                         </h2>
                     </div>
                 </div>
+                {{-- @endforeach --}}
                 {{-- BACKEND DELETE INI KBAWAH BOLO!! --}}
                 <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
 

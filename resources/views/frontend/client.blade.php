@@ -5,9 +5,9 @@
             <img src="{{ asset('images/banner.png') }}" class="w-full h-auto" alt="">
             <img src="{{ asset('images/textClient.png') }}"
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/5" alt="">
-        </div>        <div class="relative w-full">
-            <img src="{{ asset('images/bg3.png') }}" class="w-full h-auto" alt="">
-            <div class="absolute inset-0 flex flex-col items-center pt-14">
+        </div>        
+        <div class="relative w-full bg-cover bg-center" style="background-image: url('{{ asset('images/bg3.png') }}');">
+            <div class="flex flex-col items-center pt-14 px-16 pb-20">
                 <h2 class="text-5xl text-[#0E4F58] font-bold text-center">
                     Our Client
                 </h2>
@@ -41,6 +41,7 @@
                 </div>
                 <div class="w-full px-16 mt-6">
                     <div class="bg-white/50 rounded-2xl w-full py-6 px-8">
+                        {{-- MASUK DB BAKCEND --}}
                         <ul class="list-disc pl-6">
                             <li class="text-lg text-[#0E4F58] mt-2">Coastal and terrestrial design surveys for mangrove management, Dugong conservation, and coastal rehabilitation in Belitong Island.</li>
                             <li class="text-lg text-[#0E4F58] mt-2">Inland and underwater coal spill excavation project, Popole Island, Banten.</li>

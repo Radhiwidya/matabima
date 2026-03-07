@@ -17,3 +17,9 @@ Route::get('/product', function () {
 Route::get('/gallery', function () {
     return view('frontend.gallery');
 });
+Route::get('/article', function () {
+    return view('frontend.article');
+});
+Route::get('/future-plan', function () {
+    return view('frontend.future');
+});
