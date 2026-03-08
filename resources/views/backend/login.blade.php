@@ -4,22 +4,47 @@
 @endsection
 @section('content')
 
-    <body class="flex bg-blue-300 justify-between px-32 items-center w-full h-[100vh]">
-        <div class="text-center">
-            <p class="text-8xl font-bold text-blue-500">MATABIMA</p>
-            <p class="text-5xl bg-blue-500 rounded-lg text-blue-300 font-semibold pb-2 px-4">Bersama Indonesia</p>
+    <body class="bg-blue-300 min-h-screen flex items-center justify-center">
+
+        <div class="w-full max-w-7xl flex flex-col xl:flex-row items-center justify-between gap-16 px-6 md:px-12 lg:px-20">
+
+            <div class="text-center xl:text-left">
+                <p class="text-5xl md:text-7xl xl:text-8xl font-bold text-blue-500">
+                    MATABIMA
+                </p>
+
+                <p
+                    class="text-2xl md:text-4xl xl:text-5xl bg-blue-500 text-blue-200 
+            font-semibold px-4 pb-2 rounded-lg inline-block mt-2">
+                    Bersama Indonesia
+                </p>
+            </div>
+
+            <div class="bg-white/70 backdrop-blur-md w-full max-w-sm rounded-2xl py-10 px-8 shadow-2xl shadow-black/40">
+
+                <h2 class="text-xl font-bold text-center">Login</h2>
+
+                <form class="mt-8">
+
+                    <label class="text-sm">Username</label>
+                    <input
+                        class="border w-full mb-4 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        type="text" placeholder="username">
+
+                    <label class="text-sm">Password</label>
+                    <input
+                        class="border w-full mb-4 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        type="password" placeholder="password">
+
+                    <button
+                        class="mt-6 w-full bg-blue-500 py-2 text-white font-medium rounded-xl hover:bg-blue-600 transition">
+                        Login
+                    </button>
+
+                </form>
+            </div>
+
         </div>
-        <div class="bg-white/60 w-96 rounded-2xl py-10 px-8 shadow-2xl shadow-black/50">
-            <div class="text-xl text-center -mt-2 font-bold">Login</div>
-            <form class="mt-10" action="">
-                <label for="Username">Username</label>
-                <input class="border w-full mb-4 rounded-lg px-4 py-2" type="text" name="Username" placeholder="username">
-                <label for="Password">Password</label>
-                <input class="border w-full mb-4 rounded-lg px-4 py-2" type="password" name="Password"
-                    placeholder="password">
-                <button
-                    class=" mt-10 text-center w-full bg-blue-500 p-1 text-white font-medium rounded-xl border-blue-900 hover:cursor-pointer hover:bg-blue-600 transition">Login</button>
-            </form>
-        </div>
+
     </body>
 @endsection
