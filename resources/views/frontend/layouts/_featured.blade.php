@@ -1,61 +1,78 @@
 <div class="relative w-full">
 
-    <img src="{{ asset('images/bg.png') }}" class="w-full h-auto" alt="">
+    <!-- Desktop Background -->
+    <img src="{{ asset('images/bg.png') }}" class="hidden lg:block w-full h-auto" alt="Background">
 
-    <div class="absolute inset-0 flex flex-col items-center pt-14">
+    <!-- Mobile & Tablet Background -->
+    <div class="lg:hidden w-full bg-cover bg-center"
+        style="background-image: url('{{ asset('images/bg.png') }}');">
 
-        <h2 class="bree-serif text-6xl mb-20 text-[#0E4F58] text-center">
+        <div class="flex flex-col items-center px-6 py-10">
+
+            <h2 class="bree-serif text-3xl text-[#0E4F58] text-center mb-8">
+                Featured Content
+            </h2>
+
+            <!-- Card Container -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 w-full pb-20">
+
+                <a href="/service" class="w-[85%] md:w-1/3">
+                    <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-2 transition">
+                        <img src="{{ asset('images/ourService.png') }}" class="w-full rounded-2xl">
+                        <div class="text-lg text-[#0E4F58] font-bold py-4">Our Service</div>
+                    </div>
+                </a>
+
+                <a href="/client" class="w-[85%] md:w-1/3">
+                    <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-2 transition">
+                        <img src="{{ asset('images/ourClient.png') }}" class="w-full rounded-2xl">
+                        <div class="text-lg text-[#0E4F58] font-bold py-4">Our Clients</div>
+                    </div>
+                </a>
+
+                <a href="/product" class="w-[85%] md:w-1/3">
+                    <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-2 transition">
+                        <img src="{{ asset('images/ourProduct.png') }}" class="w-full rounded-2xl">
+                        <div class="text-lg text-[#0E4F58] font-bold py-4">Our Product</div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Desktop Content -->
+    <div class="hidden lg:flex absolute inset-0 flex-col items-center pt-20 px-16">
+
+        <h2 class="bree-serif text-6xl text-[#0E4F58] mb-20 text-center">
             Featured Content
         </h2>
 
         <div class="flex justify-center gap-16">
+
             <a href="/service">
-                <div
-                    class="flex flex-col bg-white/90  rounded-2xl justify-center items-center text-center min-w-48 max-w-sm 
-                    transform transition duration-300 hover:bg-white/70 hover:-translate-y-3 hover:shadow-[0_20px_60px_0_#2EA7E090]">
-
-                    <div class="flex w-full justify-center mb-2">
-                        <img src="{{ asset('images/ourService.png') }}" class="w-full rounded-2xl" alt="">
-                    </div>
-
-                    <div class="text-xl text-[#0E4F58] font-bold mb-4">
-                        Our Service
-                    </div>
-
+                <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-3 transition">
+                    <img src="{{ asset('images/ourService.png') }}" class="w-full rounded-2xl">
+                    <div class="text-xl text-[#0E4F58] font-bold py-4">Our Service</div>
                 </div>
             </a>
+
             <a href="/client">
-                <div
-                    class="flex flex-col bg-white/90  rounded-2xl justify-center items-center text-center min-w-48 max-w-sm 
-                    transform transition duration-300 hover:bg-white/70 hover:-translate-y-3 hover:shadow-[0_20px_60px_0_#2EA7E090]">
-
-                    <div class="flex w-full justify-center mb-2">
-                        <img src="{{ asset('images/ourClient.png') }}" class="w-full rounded-2xl"
-                            alt="">
-                    </div>
-
-                    <div class="text-xl text-[#0E4F58] font-bold mb-4">
-                        Our Clients
-                    </div>
-
+                <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-3 transition">
+                    <img src="{{ asset('images/ourClient.png') }}" class="w-full rounded-2xl">
+                    <div class="text-xl text-[#0E4F58] font-bold py-4">Our Clients</div>
                 </div>
             </a>
+
             <a href="/product">
-                <div
-                    class="flex flex-col bg-white/90  rounded-2xl justify-center items-center text-center min-w-48 max-w-sm 
-                    transform transition duration-300 hover:bg-white/70 hover:-translate-y-3 hover:shadow-[0_20px_60px_0_#2EA7E090]">
-
-                    <div class="flex w-full justify-center mb-2">
-                        <img src="{{ asset('images/ourProduct.png') }}" class="w-full rounded-2xl"
-                            alt="">
-                    </div>
-
-                    <div class="text-xl text-[#0E4F58] font-bold mb-4">
-                        Our Product
-                    </div>
-
+                <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-3 transition">
+                    <img src="{{ asset('images/ourProduct.png') }}" class="w-full rounded-2xl">
+                    <div class="text-xl text-[#0E4F58] font-bold py-4">Our Product</div>
                 </div>
             </a>
+
         </div>
     </div>
+
 </div>

@@ -22,10 +22,10 @@
     }
 </style>
 
-<body>
+<body class="m-0 overflow-x-hidden">    
     @include('frontend.layouts._navbar')
     @yield('content')
-    @include('frontend.layouts._footer')
+    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>

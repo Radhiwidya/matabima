@@ -23,3 +23,7 @@ Route::get('/article', function () {
 Route::get('/future-plan', function () {
     return view('frontend.future');
 });
+// ===================== Admin Routes ======================
+Route::get('/backend', function () {
+    return view('backend.login');
+});
