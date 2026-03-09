@@ -26,10 +26,10 @@
                 </a>
             </div>
         </div>
-        <div class="relative px-6 sm:px-10 md:px-16 w-full bg-cover pb-16 pt-4 md:py-20 bg-center"
+        <div class="relative px-6 sm:px-10 md:px-16 w-full bg-cover pb-16 pt-4 md:py-12 bg-center"
             style="background-image: url('{{ asset('images/bg5.png') }}');">
 
-            <h2 class="text-3xl md:text-5xl text-yellow-500 font-bold text-center pb-4 pt-2 px-10 ">Matabima Article</h2>
+            <h2 class="text-3xl md:text-5xl text-yellow-500 font-bold text-center pb-4 px-10 ">Matabima Article</h2>
             <div class="p-4">
                 <div class="relative w-full sm:w-72 mb-10">
                     <input type="text" class="w-full bg-white py-2 px-3 pr-10 rounded-lg focus:outline-none"

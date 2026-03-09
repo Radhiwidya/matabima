@@ -3,7 +3,7 @@
     <div class="absolute w-full top-0 bg-white overflow-x-hidden">
         <div class="relative w-full">
             <video class="w-full -z-10" autoplay loop muted playsinline>
-                <source src="{{ asset('images/home.mp4') }}" type="video/mp4">
+                <source src="{{ asset($data1->hero_video) }}" type="video/mp4">
             </video>
 
             <img src="{{ asset('images/welcome.png') }}"
@@ -19,7 +19,7 @@
             <div
                 class="flex flex-col lg:flex-row justify-between bg-white/70 mb-20 lg:mb-28 z-10  py-10 lg:py-4 shadow-[0_0_50px_0_#2EA7E060] w-full rounded-2xl items-center px-6 md:px-10 lg:px-12 gap-6">
 
-                <img src="{{ asset('images/image1.png') }}" class="w-full lg:w-1/3">
+                <img src="{{ asset($data1->we_are_image) }}" class="w-full lg:w-1/3">
 
                 <div class="text-center w-full">
                     <h2 class="text-xl md:text-2xl font-bold mb-4">
@@ -27,9 +27,7 @@
                     </h2>
 
                     <p class="text-justify text-[#0E4F58] text-base md:text-lg lg:text-xl">
-                        Is a company specializing in environmental action research and applied fieldwork,
-                        with a strong record of experience in ecosystem rehabilitation, reclamation,
-                        excavation, and environmental assessments.
+                        {{ $data1->we_are_caption }}
                     </p>
                 </div>
 
@@ -88,7 +86,7 @@
 
 
             <div class="w-full lg:w-[45%] h-[300px] lg:h-full relative lg:absolute right-0 top-0 bottom-0">
-                <img src="{{ asset('images/image2.png') }}" class="w-full h-full object-cover">
+                <img src="{{ asset($data1->etocia_image) }}" class="w-full h-full object-cover">
             </div>
 
         </div>
@@ -103,7 +101,7 @@
                 Let our professional team help bring your project to success.
             </div>
 
-            <div class="relative flex justify-center w-full px-6 md:px-16 lg:px-56 pt-10 overflow-hidden">
+            <div class="relative flex justify-center w-full px-6 md:px-16 lg:px-32 pt-10 overflow-hidden">
 
                 <div
                     class="flex flex-col lg:flex-row justify-between bg-white/70 mb-20 lg:mb-28 z-10 shadow-[0_0_50px_0_#00000060] w-full rounded-2xl items-center  gap-6">
@@ -115,23 +113,25 @@
                         </h2>
 
                         <p class="text-[#0E4F58] text-sm md:text-base">
-                            Jl. Magelang No.188, Yogyakarta
+                            {{ $data1->contact_address }}
                             <br><br>
-                            Telephone/Whatsapp: 0811-2639-439
+                            Phone/Whatsapp: 0811-2639-439
                             <br>
                             Email: matabima@gmail.com
                         </p>
 
                         <div class="flex w-full justify-center pt-6">
-                            <button
-                                class="bg-[#0E4F58] text-white font-semibold px-8 py-2 rounded-2xl hover:bg-[#0e4f58cb] transition">
-                                Open Maps
-                            </button>
+                            <a href="{{ $data1->contact_link }}" target="_blank">
+                                <button
+                                    class="bg-[#0E4F58] text-white font-semibold px-8 py-2 rounded-2xl hover:bg-[#0e4f58cb] hover:cursor-pointer transition">
+                                    Open Maps
+                                </button>
+                            </a>
                         </div>
 
                     </div>
 
-                    <img src="{{ asset('images/image3.png') }}"
+                    <img src="{{ asset($data1->contact_image) }}"
                         class="w-full lg:w-2/3 rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none">
 
                 </div>

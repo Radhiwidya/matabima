@@ -17,7 +17,7 @@
                 <div class="w-full max-w-6xl mt-8">
                     <div class="bg-white/50 rounded-2xl w-full p-4 md:p-6 text-center">
         
-                        <img src="{{ asset('images/bannerClient2.png') }}" class="w-full" alt="">
+                        <img src="{{ asset($banner->banner_client_image) }}" class="w-full rounded-xl" alt="">
         
                         <h3 class="text-xl md:text-2xl text-[#0E4F58] font-bold mt-4">
                             We collaborate with:
@@ -73,47 +73,11 @@
                     <div class="bg-white/50 rounded-2xl w-full py-6 px-6 md:px-8">
         
                         <ul class="list-disc pl-6 space-y-3">
-                            {{-- NTAR TAK MASUKIN DB + ADA PAGINATION --}}
+                            @foreach ($datas as $data)
                             <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Coastal and terrestrial design surveys for mangrove management, Dugong conservation, and coastal rehabilitation in Belitong Island.
+                                {{ $data->project }}
                             </li>
-        
-                            <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Inland and underwater coal spill excavation project, Popole Island, Banten.
-                            </li>
-        
-                            <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Coal spill excavation design in Panaitan Island, Ujung Kulon National Park.
-                            </li>
-        
-                            <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Coral reef restoration planning and monitoring in Dampier Strait, Raja Ampat.
-                            </li>
-        
-                            <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Coral reef damage assessment from barge grounding, Bawean Island, East Java.
-                            </li>
-        
-                            <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Baseline biodiversity research for the Bintan–Batam bridge project.
-                            </li>
-        
-                            <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Marine mammal monitoring for underwater acoustic impact mitigation, PLTU Kupang.
-                            </li>
-        
-                            <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Freshwater resource exploration in karst ecosystems of Buton Island.
-                            </li>
-        
-                            <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Environmental monitoring of coal spills in Deli and Tinjil Islands.
-                            </li>
-        
-                            <li class="text-sm md:text-lg text-[#0E4F58]">
-                                Coastal rehabilitation research using sponges as biofilters in nickel sediment areas.
-                            </li>
-        
+                            @endforeach
                         </ul>
         
                     </div>

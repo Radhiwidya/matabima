@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ $general->icon }}">
     <title>Matabima @yield('title')</title>
     @vite('resources/css/app.css')
 </head>
@@ -22,7 +23,7 @@
     }
 </style>
 
-<body class="m-0 overflow-x-hidden">    
+<body class="m-0 overflow-x-hidden">
     @include('frontend.layouts._navbar')
     @yield('content')
     <script src="//unpkg.com/alpinejs" defer></script>

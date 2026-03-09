@@ -12,66 +12,27 @@
         <div class="flex flex-col items-center pt-14 px-6 md:px-16 pb-20">
     
             <h2
-                class="text-3xl md:text-5xl text-yellow-500 font-bold text-center bg-black/50 underline pb-4 pt-2 px-6 md:px-10 rounded-2xl">
+                class="text-3xl md:text-5xl text-yellow-500 font-bold text-center bg-black/50 pb-4 pt-2 px-6 md:px-10 rounded-2xl">
                 Our plan for the future
             </h2>
-            {{-- Bisa dibikin DB MAYBE AKU BIKIN PAGINATION JUGA --}}
-            <div
-                class="flex flex-col md:flex-row w-full items-center justify-between gap-6 mt-14 rounded-2xl">
-    
-                <div class="w-full md:w-2/5">
-                    <img src="{{ asset('images/product1.png') }}"
-                        class="rounded-2xl w-full object-cover" alt="">
-                </div>
-    
-                <div
-                    class="flex flex-col w-full md:w-3/5 p-4 bg-white/80 justify-center rounded-2xl">
-    
-                    <div class="text-2xl md:text-4xl font-bold text-yellow-500 mb-2">
-                        Blue Energy Roadmap to Net Zero Emissions 2060
+            @foreach ($datas as $data)
+                <div class="flex flex-col md:flex-row w-full gap-6 mt-10">
+
+                    <div class="w-full md:w-2/5">
+                        <img src="{{ asset($data->image) }}" class="rounded-2xl w-full h-full">
                     </div>
-    
-                    <div class="text-justify text-[#0E4F58] text-sm md:text-lg font-normal">
-                        With the decline of fossil energy and its rising costs,
-                        MATABIMA is investing in renewable energy development.
-                        Leveraging advances in technology, we aim to harness
-                        marine wind and tidal energy—especially in archipelagic
-                        waters rich in tidal flows and narrow straits.
-                        These renewable sources offer clean, affordable energy
-                        for communities across Indonesia’s islands.
+
+                    <div class="flex flex-col w-full md:w-3/5 p-6 md:p-2 md:px-6 lg:p-6 bg-white/80 rounded-2xl">
+                        <div class="text-2xl lg:text-3xl font-bold text-yellow-500 mb-2">
+                            {{ $data->title }}
+                        </div>
+
+                        <div class="text-[#0E4F58] text-sm lg:text-lg break-words whitespace-normal">
+                            {!! $data->body !!}
+                        </div>
                     </div>
-    
                 </div>
-    
-            </div>
-            {{-- BATASSS --}}
-            <div
-                class="flex flex-col md:flex-row w-full items-center justify-between gap-6 mt-14 rounded-2xl">
-    
-                <div class="w-full md:w-2/5">
-                    <img src="{{ asset('images/product1.png') }}"
-                        class="rounded-2xl w-full object-cover" alt="">
-                </div>
-    
-                <div
-                    class="flex flex-col w-full md:w-3/5 p-4 bg-white/80 justify-center rounded-2xl">
-    
-                    <div class="text-2xl md:text-4xl font-bold text-yellow-500 mb-2">
-                        Blue Energy Roadmap to Net Zero Emissions 2060
-                    </div>
-    
-                    <div class="text-justify text-[#0E4F58] text-sm md:text-lg font-normal">
-                        With the decline of fossil energy and its rising costs,
-                        MATABIMA is investing in renewable energy development.
-                        Leveraging advances in technology, we aim to harness
-                        marine wind and tidal energy—especially in archipelagic
-                        waters rich in tidal flows and narrow straits.
-                    </div>
-    
-                </div>
-    
-            </div>
-    
+                @endforeach
         </div>
     </div>
         <div class=" -mt-6">

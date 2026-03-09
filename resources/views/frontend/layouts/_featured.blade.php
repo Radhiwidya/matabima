@@ -18,21 +18,21 @@
 
                 <a href="/service" class="w-[85%] md:w-1/3">
                     <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-2 transition">
-                        <img src="{{ asset('images/ourService.png') }}" class="w-full rounded-2xl">
+                        <img src="{{ asset($general->our_service) }}" class="w-full rounded-2xl">
                         <div class="text-lg text-[#0E4F58] font-bold py-4">Our Service</div>
                     </div>
                 </a>
 
                 <a href="/client" class="w-[85%] md:w-1/3">
                     <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-2 transition">
-                        <img src="{{ asset('images/ourClient.png') }}" class="w-full rounded-2xl">
+                        <img src="{{ asset($general->our_clients) }}" class="w-full rounded-2xl">
                         <div class="text-lg text-[#0E4F58] font-bold py-4">Our Clients</div>
                     </div>
                 </a>
 
                 <a href="/product" class="w-[85%] md:w-1/3">
                     <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-2 transition">
-                        <img src="{{ asset('images/ourProduct.png') }}" class="w-full rounded-2xl">
+                        <img src="{{ asset($general->our_product) }}" class="w-full rounded-2xl">
                         <div class="text-lg text-[#0E4F58] font-bold py-4">Our Product</div>
                     </div>
                 </a>
@@ -53,21 +53,21 @@
 
             <a href="/service">
                 <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-3 transition">
-                    <img src="{{ asset('images/ourService.png') }}" class="w-full rounded-2xl">
+                    <img src="{{ asset($general->our_service) }}" class="w-full rounded-2xl">
                     <div class="text-xl text-[#0E4F58] font-bold py-4">Our Service</div>
                 </div>
             </a>
 
             <a href="/client">
                 <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-3 transition">
-                    <img src="{{ asset('images/ourClient.png') }}" class="w-full rounded-2xl">
+                    <img src="{{ asset($general->our_clients) }}" class="w-full rounded-2xl">
                     <div class="text-xl text-[#0E4F58] font-bold py-4">Our Clients</div>
                 </div>
             </a>
 
             <a href="/product">
                 <div class="bg-white/90 rounded-2xl text-center hover:-translate-y-3 transition">
-                    <img src="{{ asset('images/ourProduct.png') }}" class="w-full rounded-2xl">
+                    <img src="{{ asset($general->our_product) }}" class="w-full rounded-2xl">
                     <div class="text-xl text-[#0E4F58] font-bold py-4">Our Product</div>
                 </div>
             </a>
