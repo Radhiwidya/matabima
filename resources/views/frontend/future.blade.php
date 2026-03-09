@@ -2,7 +2,7 @@
 @section('content')
 <div class="absolute w-full top-0 bg-white overflow-x-hidden">
     <div class="relative w-full">
-            <img src="{{ asset('images/bannerFuture.png') }}" class="w-full h-auto" alt="">
+            <img src="{{ asset($general->future_banner) }}" class="w-full h-auto" alt="">
             {{-- <img src="{{ asset('images/textProduct.png') }}"
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/5" alt=""> --}}
         </div>
