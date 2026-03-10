@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FutureController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class,'indexFrontEnd']);
@@ -13,12 +15,9 @@ Route::get('/client', [ClientController::class,'indexFrontend']);
 Route::get('/product', [ProductController::class,'indexFrontend']);
 Route::get('/gallery', [GalleryController::class,'indexFrontend']);
 Route::get('/future-plan', [FutureController::class,'indexFrontend']);
-Route::get('/service', function () {
-    return view('frontend.service');
-});
-Route::get('/article', function () {
-    return view('frontend.article');
-});
+Route::get('/article', [ArticleController::class,'index']);
+Route::get('/article/{slug}',[ArticleController::class,'show'])->name('articles.show');
+Route::get('/service', [ServiceController::class,'index']);
 // ===================== Admin Routes =====================
 Route::prefix('backend')->group(function () {
     Route::get('/', function () {
@@ -53,4 +52,16 @@ Route::prefix('backend')->group(function () {
     Route::post('/general/general', [GeneralController::class,'updateGeneral'])->name('general.general');
     Route::post('/general/featured', [GeneralController::class,'updateFeatured'])->name('general.featured');
     Route::post('/general/social', [GeneralController::class,'updateSocial'])->name('general.social');
+    // =======================Article===========================
+    Route::get('/article',[ArticleController::class,'create'])->name('articles.create');
+    Route::post('/article/create',[ArticleController::class,'store'])->name('articles.store');
+    Route::get('/article/edit/{id}',[ArticleController::class,'edit'])->name('articles.edit');
+    Route::post('/article/update/{id}',[ArticleController::class,'update'])->name('articles.update');
+    Route::delete('/article/delete/{id}',[ArticleController::class,'destroy'])->name('articles.destroy');
+
+    // =======================Service===========================
+    Route::get('/service',[ServiceController::class,'create'])->name('service.create');
+    Route::post('/service/update-service',[ServiceController::class,'updateService'])->name('service.updateService');
+    Route::post('/service/add',[ServiceController::class,'addService'])->name('service.addService');
+    Route::delete('/service/delete/{id}',[ServiceController::class,'destroy'])->name('service.destroy');
 });

@@ -6,6 +6,7 @@
             {{-- <img src="{{ asset('images/textProduct.png') }}"
                 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/5" alt=""> --}}
         </div>
+        {{-- ini kebawah untuk artikel terbaru --}}
         <div class="hidden md:block relative w-full">
             <img src="{{ asset('images/banner.png') }}" class="w-full h-auto" alt="">
 
@@ -46,41 +47,19 @@
 
                 <div
                     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 md:gap-x-20 gap-y-8 md:gap-y-10 rounded-2xl">
-
-                    <!-- NTAR TAK BIKIN DB -->
-                    <a href="" class="group block">
-                        <div
-                            class="relative w-full aspect-square rounded-2xl shadow-lg transform transition duration-300 ease-out group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-black/40">
-
-                            <img src="{{ asset('images/banner.png') }}" class="rounded-2xl w-full h-full object-cover"
-                                alt="">
-
+                    @foreach ($datas as $data)
+                    <a href="{{ route('articles.show',$data->slug) }}" class="group block">
+                        <div class="relative w-full aspect-square rounded-2xl shadow-lg transform transition duration-300 ease-out group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-black/40">
+                            <img src="{{ asset($data->thumbnail) }}" class="rounded-2xl w-full h-full object-cover" alt="Article Thumbnail">
                             <div class="absolute bottom-4 left-4 w-full">
-                                <p class="text-white text-sm">10/01/2010</p>
-
+                                <p class="text-white text-sm">{{ $data->created_at->translatedFormat('d F Y') }}</p>
                                 <h3 class="text-white text-lg md:text-xl font-bold group-hover:underline">
-                                    Judul Artikel
+                                    {{ $data->title }}
                                 </h3>
                             </div>
                         </div>
                     </a>
-
-                    <a href="" class="group block">
-                        <div
-                            class="relative w-full aspect-square rounded-2xl shadow-lg transform transition duration-300 ease-out group-hover:-translate-y-2 group-hover:shadow-xl group-hover:shadow-black/40">
-
-                            <img src="{{ asset('images/banner.png') }}" class="rounded-2xl w-full h-full object-cover"
-                                alt="">
-
-                            <div class="absolute bottom-4 left-4 w-full">
-                                <p class="text-white text-sm">10/01/2010</p>
-
-                                <h3 class="text-white text-lg md:text-xl font-bold group-hover:underline">
-                                    Judul Artikel
-                                </h3>
-                            </div>
-                        </div>
-                    </a>
+                    @endforeach
                 </div>
 
             </div>

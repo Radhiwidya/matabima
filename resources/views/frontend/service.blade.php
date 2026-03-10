@@ -8,18 +8,10 @@
         </div>
         <div class="w-full my-6 md:my-12">
             <div class="w-full text-center text-2xl md:text-3xl lg:text-5xl text-[#0E4F58] font-bold">
-                Applied Research and Implementation
+                {{ $data->title }}
             </div>
             <div class="w-full text-justify text-lg text-[#0E4F58] font-normal px-6 md:px-20 mt-6">
-                MATABIMA is a company engaged in <strong> research, planning, and natural resource management</strong>, as
-                well as the
-                practical implementation of research designs proven in the field. MATABIMA offers unique, highly specific
-                <strong>consulting and project implementation services</strong> in coastal management, small islands,
-                mangrove ecosystems,
-                and ecosystem rehabilitation. Special attention is currently directed toward carbonate islands and karst
-                ecosystems that dominate several landscapes in eastern Indonesia. Our consulting services cover the full
-                spectrum—from initial planning and design to implementation, project mentoring, and development into
-                flagship models for sustainable development in Indonesia.
+                {!! $data->description !!}
             </div>
         </div>
         <div class="relative flex w-full overflow-hidden px-4 md:px-8 lg:px-16 pt-8 lg:pt-10">
@@ -27,18 +19,15 @@
             <div
                 class="flex flex-col lg:flex-row justify-between items-center w-full gap-6 md:gap-8 lg:gap-5 mb-12 lg:mb-28 z-10 lg:px-12">
                 <div class="w-full flex justify-center">
-                    <img src="{{ asset('images/imageService1.png') }}" class="w-full max-w-md lg:max-w-none"
-                        alt="imageService">
+                    <img src="{{ asset($data->image1) }}" class="w-full max-w-md lg:max-w-none" alt="imageService">
                 </div>
 
                 <div class="w-full flex justify-center">
-                    <img src="{{ asset('images/imageService2.png') }}" class="w-full max-w-md lg:max-w-none"
-                        alt="imageService">
+                    <img src="{{ asset($data->image2) }}" class="w-full max-w-md lg:max-w-none" alt="imageService">
                 </div>
 
                 <div class="w-full flex justify-center">
-                    <img src="{{ asset('images/imageService3.png') }}" class="w-full max-w-md lg:max-w-none"
-                        alt="imageService">
+                    <img src="{{ asset($data->image3) }}" class="w-full max-w-md lg:max-w-none" alt="imageService">
                 </div>
 
             </div>
@@ -64,77 +53,22 @@
                     <p class="text-base md:text-lg mb-10 text-[#0E4F58] text-center max-w-xl">
                         Supporting sustainable coastal and marine development across indonesia
                     </p>
-
                     <div
                         class="flex flex-col md:flex-row justify-center items-stretch
                         gap-6 md:gap-6 w-full max-w-5xl">
-
-                        <div
-                            class="flex flex-col bg-white/90 rounded-2xl
+                        @foreach ($datas as $data)
+                            <div
+                                class="flex flex-col bg-white/90 rounded-2xl
                             w-full md:w-1/3 min-h-96 pb-6">
-
-                            <img src="{{ asset('images/OPS1.png') }}" class="w-full rounded-t-2xl">
-
-                            <div class="text-[#0E4F58] mb-4 px-4 text-center">
-                                <h2 class="text-lg font-bold">
-                                    Applied Research and Implementation Studies
-                                </h2>
-                                <p>Translating science into practical, sustainable field solutions.</p>
+                                <img src="{{ asset($data->image) }}" class="w-full rounded-t-2xl">
+                                <div class="text-[#0E4F58] mb-4 px-4 text-center">
+                                    <h2 class="text-lg font-bold">
+                                        {{ $data->title }}
+                                    </h2>
+                                    <p>{{ $data->description }}</p>
+                                </div>
                             </div>
-
-                            <a href="" class="mt-auto self-center">
-                                <button class="bg-[#0E4F58] rounded-2xl text-white px-4 py-2 hover:bg-[#072D33] transition">
-                                    Read More >>
-                                </button>
-                            </a>
-
-                        </div>
-
-                        <div
-                            class="flex flex-col bg-white/90 rounded-2xl
-                            w-full md:w-1/3 min-h-96 pb-6">
-
-                            <img src="{{ asset('images/ourService.png') }}" class="w-full rounded-t-2xl">
-
-                            <div class="text-[#0E4F58] mb-4 px-4 text-center">
-                                <h2 class="text-lg font-bold">
-                                    Environmental Studies
-                                </h2>
-                                <p>Science-based environmental studies ensuring regulatory compliance.</p>
-                            </div>
-
-                            <a href="" class="mt-auto self-center">
-                                <button class="bg-[#0E4F58] rounded-2xl text-white px-4 py-2 hover:bg-[#072D33] transition">
-                                    Read More >>
-                                </button>
-                            </a>
-
-                        </div>
-
-                        <div
-                            class="flex flex-col bg-white/90 rounded-2xl
-                            w-full md:w-1/3 min-h-96 pb-6">
-
-                            <img src="{{ asset('images/OPS2.png') }}" class="w-full rounded-t-2xl">
-
-                            <div class="text-[#0E4F58] mb-4 px-4 text-center">
-                                <h2 class="text-lg font-bold">
-                                    Shipping Accidents and Insurance
-                                </h2>
-                                <p>
-                                    Independent surveys and scientific assessments for shipping accidents
-                                    and insurance claims.
-                                </p>
-                            </div>
-
-                            <a href="" class="mt-auto self-center">
-                                <button class="bg-[#0E4F58] rounded-2xl text-white px-4 py-2 hover:bg-[#072D33] transition">
-                                    Read More >>
-                                </button>
-                            </a>
-
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -153,84 +87,30 @@
                     <p class="text-lg mt-4 text-[#0E4F58] text-center">
                         Supporting sustainable coastal and marine development across indonesia
                     </p>
-
                     <div class="flex justify-center gap-16 mt-16">
-
-                        <div class="flex flex-col bg-white/90 rounded-2xl text-center w-full pb-6 shadow-lg">
-
-                            <img src="{{ asset('images/OPS1.png') }}" class="w-full rounded-t-2xl" alt="">
-
-                            <div class="text-[#0E4F58] px-4 mt-4">
-                                <h2 class="text-lg font-bold mb-2">
-                                    Applied Research and Implementation Studies
-                                </h2>
-                                <p>
-                                    Translating science into practical, sustainable field solutions.
-                                </p>
+                        @foreach ($datas as $data)
+                            <div class="flex flex-col bg-white/90 rounded-2xl text-center w-full pb-6 shadow-lg">
+                                <img src="{{ asset($data->image) }}" class="w-full rounded-t-2xl" alt="">
+                                <div class="text-[#0E4F58] px-4 mt-4">
+                                    <h2 class="text-lg font-bold mb-2">
+                                        {{ $data->title }}
+                                    </h2>
+                                    <p>
+                                        {{ $data->description }}
+                                    </p>
+                                </div>
+                                <a href="" class="mt-auto self-center">
+                                    <button
+                                        class="mt-6 bg-[#0E4F58] rounded-2xl text-white px-4 py-2 hover:bg-[#072D33] transition">
+                                        Read More >>
+                                    </button>
+                                </a>
                             </div>
-
-                            <a href="" class="mt-auto self-center">
-                                <button
-                                    class="mt-6 bg-[#0E4F58] rounded-2xl text-white px-4 py-2 hover:bg-[#072D33] transition">
-                                    Read More >>
-                                </button>
-                            </a>
-
-                        </div>
-
-                        <div class="flex flex-col bg-white/90 rounded-2xl text-center w-full pb-6 shadow-lg">
-
-                            <img src="{{ asset('images/ourService.png') }}" class="w-full rounded-t-2xl" alt="">
-
-                            <div class="text-[#0E4F58] px-4 mt-4">
-                                <h2 class="text-lg font-bold mb-2">
-                                    Environmental Studies
-                                </h2>
-                                <p>
-                                    Science-based environmental studies ensuring regulatory compliance.
-                                </p>
-                            </div>
-
-                            <a href="" class="mt-auto self-center">
-                                <button
-                                    class="mt-6 bg-[#0E4F58] rounded-2xl text-white px-4 py-2 hover:bg-[#072D33] transition">
-                                    Read More >>
-                                </button>
-                            </a>
-
-                        </div>
-
-                        <div class="flex flex-col bg-white/90 rounded-2xl text-center w-full pb-6 shadow-lg">
-
-                            <img src="{{ asset('images/OPS2.png') }}" class="w-full rounded-t-2xl" alt="">
-
-                            <div class="text-[#0E4F58] px-4 mt-4">
-                                <h2 class="text-lg font-bold mb-2">
-                                    Shipping Accidents and Insurance
-                                </h2>
-                                <p>
-                                    Independent surveys and scientific assessments for shipping accidents and insurance
-                                    claims.
-                                </p>
-                            </div>
-
-                            <a href="" class="mt-auto self-center">
-                                <button
-                                    class="mt-6 bg-[#0E4F58] rounded-2xl text-white px-4 py-2 hover:bg-[#072D33] transition">
-                                    Read More >>
-                                </button>
-                            </a>
-
-                        </div>
-
+                        @endforeach
                     </div>
-
                 </div>
             </div>
-
+            @include('frontend.layouts._featured')
+            @include('frontend.layouts._footer')
         </div>
-
-        @include('frontend.layouts._featured')
-        @include('frontend.layouts._footer')
-    </div>
-@endsection
+    @endsection
