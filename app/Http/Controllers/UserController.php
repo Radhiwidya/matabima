@@ -29,13 +29,13 @@ class UserController extends Controller
             'role'=>'user'
         ]);
 
-        return back();
+        return back()->with('success','User created successfully');
     }
 
     public function destroy($id)
     {
         User::findOrFail($id)->delete();
-        return back();
+        return back()->with('success','User deleted successfully');
     }
 
     public function updatePassword(Request $request,$id)

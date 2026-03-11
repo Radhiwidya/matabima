@@ -54,7 +54,7 @@
                 </div>
                 {{-- Thumbnail --}}
                 <div class="mt-6">
-                    <img src="{{ asset($data->thumbnail) }}" class="w-full rounded-xl object-cover" alt="thumbnail">
+                    <img src="{{ asset($data->thumbnail) }}" class="w-full rounded-lg object-cover" alt="thumbnail">
                 </div>
                 {{-- Content --}}
                 <div class="mt-8 space-y-6 text-gray-700 leading-relaxed text-[16px]">

@@ -41,14 +41,14 @@
                                 <td class="px-6 py-4 flex justify-center gap-2">
                                     <!-- Edit Button -->
                                     <button onclick="openModal({{ $user->id }}, '{{ $user->username }}')"
-                                        class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">
+                                        class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 hover:cursor-pointer">
                                         Edit
                                     </button>
                                     <!-- Delete -->
                                     <form action="{{ route('users.destroy', $user->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+                                        <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 hover:cursor-pointer">
                                             Delete
                                         </button>
                                     </form>
@@ -64,7 +64,7 @@
                                         <label>Username</label>
                                         <input id="editName" name="username"
                                             class="border bg-gray-200 rounded w-full p-2 mt-2 mb-4 hover:cursor-not-allowed"
-                                            disabled>
+                                            readonly>
                                         <label>New Password</label>
                                         <input type="password" name="password" class="border rounded w-full p-2 mt-2 mb-4"
                                             placeholder="Kosongkan jika tidak diubah">
@@ -76,7 +76,7 @@
                                                 class="bg-gray-400 text-white px-4 py-2 rounded">
                                                 Cancel
                                             </button>
-                                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hover:cursor-pointer">
                                                 Update
                                             </button>
                                         </div>
