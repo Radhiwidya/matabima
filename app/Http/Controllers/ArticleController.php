@@ -11,12 +11,29 @@ use Illuminate\Support\Str;
 
 class ArticleController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $datas = Article::latest()->get();
+        $search = $request->search;
+
+        $latest = Article::latest()->first();
+
+        $datas = Article::when($search, function ($query) use ($search) {
+            $query->where('title', 'like', '%' . $search . '%');
+        })
+            ->latest()
+            ->paginate(6)
+            ->withQueryString();
+
         $banner = HomeContent::first();
         $general = General::first();
-        return view('frontend.article', compact('datas', 'banner', 'general'));
+
+        return view('frontend.article', compact(
+            'datas',
+            'banner',
+            'general',
+            'latest',
+            'search'
+        ));
     }
     public function create()
     {
