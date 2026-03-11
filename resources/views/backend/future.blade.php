@@ -9,7 +9,7 @@
 
         <h1 class="text-2xl font-bold">@yield('title') Page Content</h1>
 
-        <div class="bg-white rounded-xl shadow p-6">
+        <div class="bg-white rounded-xl shadow p-6 w-full">
             <h2 class="text-lg font-semibold mb-4">Add Future Plan</h2>
             <form action="{{ route('future.add') }}" method="POST" enctype="multipart/form-data">
                 @csrf

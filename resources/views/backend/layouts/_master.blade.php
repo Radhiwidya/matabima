@@ -20,7 +20,9 @@
                     @yield('title')
                 </h1>
                 <div class="text-sm text-gray-500">
-                    "nanti username disini"
+                    @auth
+                        {{ Auth::user()->username }}
+                    @endauth
                 </div>
             </header>
             @if (session('success'))

@@ -20,7 +20,14 @@ class ArticleController extends Controller
     }
     public function create()
     {
-        $articles = Article::latest()->get();
+        $user = Auth::user();
+
+        if ($user->role == 'admin') {
+            $articles = Article::latest()->get();
+        } else {
+            $articles = Article::where('author', $user->username)->latest()->get();
+        }
+
         return view('backend.article', compact('articles'));
     }
     public function store(Request $request)
@@ -49,7 +56,7 @@ class ArticleController extends Controller
             'thumbnail'     => $thumbnail,
             'content'       => $request->content,
             'is_published'  => $request->is_published ?? true,
-            'user_id'       => Auth::id()
+            'author'        => Auth::user()->username,
         ]);
 
         return back()->with(
@@ -71,9 +78,9 @@ class ArticleController extends Controller
         if ($request->hasFile('thumbnail')) {
             $file = $request->file('thumbnail');
             $filename = time() . '_' . Str::slug($request->title) . '.' . $file->getClientOriginalExtension();
-            $destination = public_path('images/article');
+            $destination = public_path('images/articles');
             $file->move($destination, $filename);
-            $article->thumbnail = 'images/article/' . $filename;
+            $article->thumbnail = 'images/articles/' . $filename;
         }
 
         $article->update([

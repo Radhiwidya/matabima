@@ -8,7 +8,19 @@
     <div class="space-y-8">
 
         <h1 class="text-2xl font-bold">@yield('title') Page Content</h1>
-
+        <div class="bg-white rounded-xl shadow p-6">
+            <h2 class="text-lg font-semibold mb-4">Caption Section</h2>
+            <form action="{{ route('product.caption') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <textarea name="product_caption" class="border rounded w-full p-3 mt-2 mb-4">{{ $caption->product_caption }}</textarea>
+                <div class="flex gap-4 justify-end">
+                    <button type="submit"
+                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hover:cursor-pointer">
+                        Update
+                    </button>
+                </div>
+            </form>
+        </div>
         <div class="bg-white rounded-xl shadow p-6">
             <h2 class="text-lg font-semibold mb-4">Add Product</h2>
             <form action="{{ route('product.add') }}" method="POST" enctype="multipart/form-data">
@@ -70,19 +82,6 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-        <div class="bg-white rounded-xl shadow p-6">
-            <h2 class="text-lg font-semibold mb-4">Caption Section</h2>
-            <form action="{{ route('product.caption') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <textarea name="product_caption" class="border rounded w-full p-3 mt-2 mb-4">{{ $caption->product_caption }}</textarea>
-                <div class="flex gap-4 justify-end">
-                    <button type="submit"
-                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 hover:cursor-pointer">
-                        Update
-                    </button>
-                </div>
-            </form>
         </div>
     </div>
 @endsection

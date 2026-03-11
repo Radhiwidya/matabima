@@ -31,21 +31,25 @@
         <div class="bg-white/70 backdrop-blur-md w-full max-w-sm rounded-2xl py-10 px-8 shadow-2xl shadow-black/40">
 
             <h2 class="text-xl font-bold text-center">Login</h2>
-
-            <form class="mt-8">
-
+            <form action="/backend/login" method="POST" class="mt-8">
+                @if (session('error'))
+                    <div class="bg-red-500 text-white p-3 mb-4 rounded">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                @csrf
                 <label class="text-sm">Username</label>
-                <input
+                <input name="username"
                     class="border w-full mb-4 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     type="text" placeholder="username">
 
                 <label class="text-sm">Password</label>
-                <input
+                <input name="password"
                     class="border w-full mb-4 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                     type="password" placeholder="password">
 
                 <button
-                    class="mt-6 w-full bg-blue-500 py-2 text-white font-medium rounded-xl hover:bg-blue-600 transition">
+                    class="mt-6 w-full bg-blue-500 py-2 text-white font-medium rounded-xl hover:bg-blue-600 hover:cursor-pointer transition">
                     Login
                 </button>
 
